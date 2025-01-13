@@ -18,7 +18,7 @@ app.use(express.static("public"));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/views/index.html");
 });
-app.enable("trust proxy");
+
 // your first API endpoint...
 app.get("/api/whoami", function (req, res) {
   const ipAddress = req.socket.remoteAddress;
